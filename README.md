@@ -35,9 +35,9 @@ There are many great addons (standalone and bundled) that already solve this sam
 
 ### Resources
 These are some resources I found helpful along the way:
-- Wowpedia: https://wowpedia.fandom.com/wiki/World_of_Warcraft_API
-- Ace3 for Dummies: https://wowpedia.fandom.com/wiki/Ace3_for_Dummies
-- BigWigsMods packager: https://github.com/BigWigsMods/packager
+- Wowpedia: [https://wowpedia.fandom.com/wiki/World_of_Warcraft_API](https://wowpedia.fandom.com/wiki/World_of_Warcraft_API)
+- Ace3 for Dummies: [https://wowpedia.fandom.com/wiki/Ace3_for_Dummies](https://wowpedia.fandom.com/wiki/Ace3_for_Dummies)
+- BigWigsMods packager: [https://github.com/BigWigsMods/packager](https://github.com/BigWigsMods/packager)
 - The WoW Addons Discord server
 
 [open issues]: https://github.com/Br3gGames/TheGrimRepair/issues
