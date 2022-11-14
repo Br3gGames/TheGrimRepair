@@ -25,4 +25,3 @@ manual-changelog:
 ignore:
   - "*.md"
   - LICENSE
-  
