@@ -2,7 +2,7 @@
 
 [Full Changelog] [Previous Releases]
 
-## [0.0.2] - 2022-11-14
+## [0.0.2] - 2022-11-13
 
 ### Added
 
