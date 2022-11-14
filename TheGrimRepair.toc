@@ -1,12 +1,12 @@
 ## Interface: 100000
-## Title: The Grim Repair
+## Title: TheGrimRepair
 ## Notes: Automates repairs and sells poor quality items for you
 ## Author: Br3g
 ## Version: @project-version@
 ## SavedVariables: TheGrimRepairDB
 ## OptionalDeps: Ace3
 ## X-Curse-Project-ID: 701908
-### X-WoWI-ID: 
+## X-WoWI-ID: 26462
 ## X-Wago-ID: PANz9VG4
 
 Libs\LibStub\LibStub.lua
