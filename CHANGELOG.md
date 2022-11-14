@@ -2,6 +2,17 @@
 
 [Full Changelog] [Previous Releases]
 
+## [0.0.2] - 2022-11-14
+
+### Added
+
+- Wago project ID
+
+### Fixed
+
+- Broken markdown on README
+- Ignoring files not needed for the final package
+
 ## [0.0.1] - 2022-11-13
 
 ### Added
@@ -14,6 +25,7 @@
 - Auto repairs using personal funds or guild repairs (if available)
 - Auto sells gray items, optionally keep items which should become eligible for transmog in a future WoW update
 
-[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/
+[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/0.0.1...0.0.2
 [Previous Releases]: https://github.com/Br3gGames/TheGrimRepair/releases
 [0.0.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/v0.0.1
+[0.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/v0.0.2
