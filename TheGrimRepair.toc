@@ -1,5 +1,5 @@
 ## Interface: 100000
-## Title: The Grim Repair
+## Title: TheGrimRepair
 ## Notes: Automates repairs and sells poor quality items for you
 ## Author: Br3g
 ## Version: @project-version@
