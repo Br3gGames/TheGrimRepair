@@ -7,7 +7,7 @@
 ## OptionalDeps: Ace3
 ## X-Curse-Project-ID: 701908
 ### X-WoWI-ID: 
-### X-Wago-ID: 
+## X-Wago-ID: PANz9VG4
 
 Libs\LibStub\LibStub.lua
 Libs\CallbackHandler-1.0\CallbackHandler-1.0.xml
