@@ -196,7 +196,14 @@ function TheGrimRepair:auto_sell()
     -- Auto Sell Grays
     if is_selling_gray_items then
         for bag_number = 0, NUM_BAG_SLOTS do
-            for slot_number = 1, GetContainerNumSlots(bag_number) do
+            --TODO: Remove after 10.0.2 launch
+            local tocVersion = select(4, GetBuildInfo())
+            local getContainerNumSlots = GetContainerNumSlots(bag_number)
+            if tocVersion == "100002" then
+                getContainerNumSlots = C_Container.GetContainerNumSlots(bag_number)
+            end
+            --
+            for slot_number = 1, getContainerNumSlots do
                 local item_location = ItemLocation:CreateFromBagAndSlot(bag_number, slot_number)
 
                 if item_location:IsValid() then
@@ -221,7 +228,13 @@ function TheGrimRepair:auto_sell()
 
                         -- Sell the item
                         if not is_skipped_item then
-                            UseContainerItem(bag_number, slot_number)
+                            --TODO: Remove after 10.0.2 launch
+                            if tocVersion == "100002" then
+                                C_Container.UseContainerItem(bag_number, slot_number)
+                            else
+                                UseContainerItem(bag_number, slot_number)
+                            end
+                            --
                             if is_showing_sale_details then
                                 self:Print(msg_sold_items .. ":", item_link .. UNCOMMON_GREEN_COLOR:WrapTextInColorCode("x" .. item_stack), GetCoinTextureString(item_sell_price))
                             end
