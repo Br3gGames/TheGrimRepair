@@ -192,15 +192,15 @@ function TheGrimRepair:auto_sell()
         4, --Armor
     }
     local msg_sold_items = "Sold"
-    --TODO: Remove after 10.0.2 launch
+    --TODO: Cleanup after 10.0.2 launch
     local tocVersion = select(4, GetBuildInfo())
-    local getContainerNumSlots
-    ---
+    local getContainerNumSlots = nil
+    --
     -- Auto Sell Grays
     if is_selling_gray_items then
         for bag_number = 0, NUM_BAG_SLOTS do
-            --TODO: Remove after 10.0.2 launch
-            if tocVersion == "100002" then
+            --TODO: Cleanup after 10.0.2 launch
+            if tocVersion == 100002 then
                 getContainerNumSlots = C_Container.GetContainerNumSlots(bag_number)
             else
                 getContainerNumSlots = GetContainerNumSlots(bag_number)
@@ -231,8 +231,8 @@ function TheGrimRepair:auto_sell()
 
                         -- Sell the item
                         if not is_skipped_item then
-                            --TODO: Remove after 10.0.2 launch
-                            if tocVersion == "100002" then
+                            --TODO: Cleanup after 10.0.2 launch
+                            if tocVersion == 100002 then
                                 C_Container.UseContainerItem(bag_number, slot_number)
                             else
                                 UseContainerItem(bag_number, slot_number)
