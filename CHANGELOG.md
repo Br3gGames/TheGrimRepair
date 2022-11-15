@@ -2,6 +2,12 @@
 
 [Full Changelog] [Previous Releases]
 
+## [0.0.5] - 2022-11-15
+
+### Removed
+
+- Backwards compatibility, only compatible with 10.0.2 and beyond
+
 ## [0.0.4] - 2022-11-14
 
 ### Fixed
@@ -41,9 +47,10 @@
 - Auto repairs using personal funds or guild repairs (if available)
 - Auto sells gray items, optionally keep items which should become eligible for transmog in a future WoW update
 
-[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/0.0.3...0.0.4
+[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/0.0.4...0.0.5
 [Previous Releases]: https://github.com/Br3gGames/TheGrimRepair/releases
 [0.0.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.1
 [0.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.2
 [0.0.3]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.3
 [0.0.4]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.4
+[0.0.5]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.5
