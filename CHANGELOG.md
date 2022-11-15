@@ -45,4 +45,5 @@
 [Previous Releases]: https://github.com/Br3gGames/TheGrimRepair/releases
 [0.0.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/v0.0.1
 [0.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/v0.0.2
-[0.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/v0.0.3
+[0.0.3]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/v0.0.3
+[0.0.4]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/v0.0.4
