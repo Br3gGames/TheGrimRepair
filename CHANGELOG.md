@@ -2,6 +2,12 @@
 
 [Full Changelog] [Previous Releases]
 
+## [0.0.4] - 2022-11-14
+
+### Fixed
+
+- Support for 10.0.2
+
 ## [0.0.3] - 2022-11-14
 
 ### Added
