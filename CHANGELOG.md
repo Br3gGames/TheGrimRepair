@@ -2,6 +2,12 @@
 
 [Full Changelog] [Previous Releases]
 
+## [0.1.0] - 2022-11-16
+
+### Added
+
+- Support for localization
+
 ## [0.0.5] - 2022-11-15
 
 ### Removed

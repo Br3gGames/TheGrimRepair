@@ -1,7 +1,7 @@
 -- TODO: Check conventions https://github.com/luarocks/lua-style-guide
 -- TODO: Remove unused Ace3 Libs
--- TODO: Localize
 TheGrimRepair = LibStub("AceAddon-3.0"):NewAddon("TGR", "AceConsole-3.0", "AceEvent-3.0")
+local L = LibStub("AceLocale-3.0"):GetLocale("TGR", true)
 
 local defaults = {
     profile = {
@@ -20,19 +20,19 @@ local options = {
         desc = {
             order = 1,
             type = "description",
-            name = "Tip: Holding Shift while clicking on a vendor will disable this addon from running for that interaction only",
+            name = L["MSG_TIP_DISABLE"],
         },
         group_repair = {
             order = 2,
             type = "group",
             inline = true,
-            name = "Auto Repair",
+            name = L["AUTO_REPAIR_HEADER"],
             args = {
                 guild_repairs = {
                     order = 1,
                     type = "toggle",
-                    name = "Use guild repairs",
-                    desc = "Use guild repairs (if available)",
+                    name = L["USE_GUILD_REPAIRS_HEADER"],
+                    desc = L["USE_GUILD_REPAIRS_DESC"],
                     get = "is_using_guild_repairs",
                     set = "toggle_guild_repairs",
                 },
@@ -42,28 +42,28 @@ local options = {
             order = 3,
             type = "group",
             inline = true,
-            name = "Auto Sell",
+            name = L["AUTO_SELL_HEADER"],
             args = {
                 sell_gray_items = {
                     order = 1,
                     type = "toggle",
-                    name = "Sell gray items",
-                    desc = "Sell all gray items",
+                    name = L["SELL_GRAY_HEADER"],
+                    desc = L["SELL_GRAY_DESC"],
                     get = "is_selling_gray_items",
                     set = "toggle_sell_gray_items",
                 },
                 moreoptions = {
                     order = 2,
                     type = "group",
-                    name = "Selling Restrictions",
+                    name = L["SELLING_RESTRICTIONS_HEADER"],
                     disabled = "is_selling_disabled",
                     args = {
                         keep_transmog_items = {
                             order = 1,
                             width = "double",
                             type = "toggle",
-                            name = "Keep transmog items (armor and weapons)",
-                            desc = "Keep gray armor and weapons for transmog",
+                            name = L["KEEP_GRAY_HEADER"],
+                            desc = L["KEEP_GRAY_DESC"],
                             get = "is_keeping_transmog_items",
                             set = "toggle_keeping_transmog_items",
                         },
@@ -72,9 +72,9 @@ local options = {
                 show_sale_details = {
                     order = 3,
                     type = "toggle",
-                    name = "Show sale details",
+                    name = L["SALE_DETAILS_HEADER"],
+                    desc = L["SALE_DETAILS_DESC"],
                     disabled = "is_selling_disabled",
-                    desc = "Show every item automatically sold and their vendor sale value",
                     get = "is_showing_sale_details",
                     set = "toggle_show_sale_details",
                 },
@@ -107,7 +107,7 @@ end
 function TheGrimRepair:PLAYER_INTERACTION_MANAGER_FRAME_SHOW(event, typeId)
     -- Hold shift to disable the addon during this interaction
     if IsShiftKeyDown() then
-        self:Print("Skipping auto repair/selling!")
+        self:Print(L["MSG_SKIPPED"])
         return
     end
 
@@ -133,24 +133,24 @@ function TheGrimRepair:auto_repair()
     local is_guild_repairable = CanGuildBankRepair()
     local is_in_guild = IsInGuild()
     local playerMoney = GetMoney()
-    local msg_repaired = "Repaired for"
+    local msg_repaired = L["MSG_REPAIRED"]
 
     -- Auto Repair
     if is_repair_merchant and is_repair_needed then
         if not (is_in_guild and is_guild_repairable) then
             is_using_guild_repairs = false
-            self:Print("You aren't in a Guild or you don't have permission to use Guild repairs")
+            self:Print(L["MSG_GUILD_REPAIR_FAIL"])
         end
 
         if is_using_guild_repairs then
-            msg_repaired = "Guild repaired you for"
+            msg_repaired = L["MSG_GUILD_REPAIR_SUCCESS"]
         end
 
         if playerMoney > 0 then
             RepairAllItems(is_using_guild_repairs)
             self:Print(msg_repaired .. ":", GetCoinTextureString(repair_cost))
         else
-            self:Print("You can't repair because you don't have any money")
+            self:Print(L["MSG_NO_MONEY"])
         end
     end
 end
@@ -191,7 +191,7 @@ function TheGrimRepair:auto_sell()
         2, --Weapon
         4, --Armor
     }
-    local msg_sold_items = "Sold"
+    local msg_sold_items = L["MSG_SOLD"]
 
     -- Auto Sell Grays
     if is_selling_gray_items then
