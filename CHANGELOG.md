@@ -53,10 +53,11 @@
 - Auto repairs using personal funds or guild repairs (if available)
 - Auto sells gray items, optionally keep items which should become eligible for transmog in a future WoW update
 
-[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/0.0.4...0.0.5
+[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/0.0.5...0.1.0
 [Previous Releases]: https://github.com/Br3gGames/TheGrimRepair/releases
 [0.0.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.1
 [0.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.2
 [0.0.3]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.3
 [0.0.4]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.4
 [0.0.5]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.5
+[0.1.0]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.1.0

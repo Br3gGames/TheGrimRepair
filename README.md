@@ -19,8 +19,8 @@ Automates repairs and sells poor quality items for you
 ### Slash Commands
 - `/tgr`, `/thegrimerepair`: Open TheGrimRepair options window
 
-### Planned
-- Localization
+### Localization
+- Localization support exists, accepting help with translations for all languages
 
 ## Contributing
 
