@@ -27,5 +27,6 @@ Libs\AceTab-3.0\AceTab-3.0.xml
 Libs\AceSerializer-3.0\AceSerializer-3.0.xml
 
 Locales\Locale-enUS.lua
+Locales\Locale-enGB.lua
 
 Core.lua

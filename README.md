@@ -20,7 +20,7 @@ Automates repairs and sells poor quality items for you
 - `/tgr`, `/thegrimerepair`: Open TheGrimRepair options window
 
 ### Localization
-- Localization support exists, accepting help with translations for all languages
+- Localization support exists and has been generated using online tools, accepting help improving translation accuracy
 
 ## Contributing
 
