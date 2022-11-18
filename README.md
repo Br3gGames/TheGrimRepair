@@ -6,15 +6,15 @@ Automates repairs and sells poor quality items for you
 ### General
 - Supports Dragonflight using Blizzards modern APIs (where possible)
 - Supports multiple character profiles
-- Temporarily disable TGR by holding the 'shift' key while interacting with a merchant
+- Temporarily disable TGR by holding the "Shift" key while interacting with a merchant
 
 ### Auto Repair
-- Automatically repair using personal funds or guild repairs (if available)
+- Automatically repair using personal funds or guild repairs (if available, guild repairs enabled by default)
 
 ### Auto Sell
 - Automatically sell gray items to help keep your bags clean
-- Optionally keep gray items which are supposed to become eligible for transmog in a future WoW update
-- Enable or disable verbose output showing which items were automatically sold
+- Optionally keep gray items which are supposed to become eligible for transmog in a future WoW update (enabled by default)
+- Enable or disable verbose output showing which items were automatically sold (enabled by default)
 
 ### Slash Commands
 - `/tgr`, `/thegrimerepair`: Open TheGrimRepair options window
