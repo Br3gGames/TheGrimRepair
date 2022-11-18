@@ -11,7 +11,7 @@ if L then
     L["MSG_REPAIRED"] = "Repaired for"
     L["MSG_SKIPPED"] = "Skipping auto repair/selling!"
     L["MSG_SOLD"] = "Sold"
-    L["MSG_TIP_DISABLE"] = "Tip: Holding Shift while clicking on a vendor will disable this addon from running for that interaction only"
+    L["MSG_TIP_DISABLE"] = "Tip: Holding \"Shift\" while clicking on a vendor will disable this addon from running for that interaction only"
     L["SALE_DETAILS_DESC"] = "Show every item automatically sold and their vendor sale value"
     L["SALE_DETAILS_HEADER"] = "Show sale details"
     L["SELL_GRAY_DESC"] = "Sell all gray items"
