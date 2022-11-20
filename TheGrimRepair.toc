@@ -28,6 +28,8 @@ Libs\AceSerializer-3.0\AceSerializer-3.0.xml
 
 Locales\Locale-enUS.lua
 Locales\Locale-enGB.lua
+Locales\Locale-esES.lua
+Locales\Locale-esMX.lua
 Locales\Locale-frFR.lua
 
 Core.lua

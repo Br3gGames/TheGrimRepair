@@ -2,6 +2,12 @@
 
 [Full Changelog] [Previous Releases]
 
+## [0.1.2] - 2022-11-20
+
+### Added
+
+- Localization support for Spanish (locale identifiers: esES, esMX)
+
 ## [0.1.1] - 2022-11-18
 
 ### Added
