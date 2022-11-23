@@ -2,11 +2,11 @@
 
 [Full Changelog] [Previous Releases]
 
-## [0.1.3] - 2022-11-xx
+## [0.1.3] - 2022-11-22
 
 ### Added
 
-- Localization support for Portuguese, Italian (locale identifiers: ptBR, itIT)
+- Localization support for Brazilian Portuguese, Italian (locale identifiers: ptBR, itIT)
 
 ## [0.1.2] - 2022-11-20
 
