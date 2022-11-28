@@ -6,7 +6,7 @@
 
 ### Added
 
-- Localization support for German (locale identifiers: deDE)
+- Localization support for German, Korean (locale identifiers: deDE, koKR)
 
 ## [0.1.3] - 2022-11-22
 

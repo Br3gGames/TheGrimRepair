@@ -33,6 +33,7 @@ Locales\Locale-esES.lua
 Locales\Locale-esMX.lua
 Locales\Locale-frFR.lua
 Locales\Locale-itIT.lua
+Locales\Locale-koKR.lua
 Locales\Locale-ptBR.lua
 
 Core.lua
