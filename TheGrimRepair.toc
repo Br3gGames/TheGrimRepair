@@ -35,5 +35,6 @@ Locales\Locale-frFR.lua
 Locales\Locale-itIT.lua
 Locales\Locale-koKR.lua
 Locales\Locale-ptBR.lua
+Locales\Locale-ruRU.lua
 
 Core.lua
