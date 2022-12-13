@@ -6,7 +6,7 @@
 
 ### Added
 
-- Localization support for Russian (locale identifiers: ruRU)
+- Localization support for Russian, Chinese (Traditional) (locale identifiers: ruRU, zhTW)
 
 ## [0.1.4] - 2022-11-28
 
