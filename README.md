@@ -13,7 +13,7 @@ Automates repairs and sells poor quality items for you
 
 ### Auto Sell
 - Automatically sell gray items to help keep your bags clean
-- Optionally keep gray items which are supposed to become eligible for transmog in a future WoW update (enabled by default)
+- Optionally keep gray items which are eligible for transmog (enabled by default)
 - Enable or disable verbose output showing which items were automatically sold (enabled by default)
 
 ### Slash Commands
