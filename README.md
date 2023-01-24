@@ -17,7 +17,7 @@ Automates repairs and sells poor quality items for you
 - Enable or disable verbose output showing which items were automatically sold (enabled by default)
 
 ### Slash Commands
-- `/tgr`, `/thegrimerepair`: Open TheGrimRepair options window
+- `/tgr`, `/thegrimrepair`: Open TheGrimRepair options window
 
 ### Localization
 - Localization support exists and has been generated using online tools, accepting help improving translation accuracy
