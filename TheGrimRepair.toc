@@ -1,4 +1,4 @@
-## Interface: 100005
+## Interface: 100007
 ## Title: TheGrimRepair
 ## Notes: Automates repairs and sells poor quality items for you
 ## Author: Br3g
