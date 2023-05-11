@@ -4,6 +4,7 @@
 ## Author: Br3g
 ## Version: @project-version@
 ## AddonCompartmentFunc: TheGrimRepair_OnAddonCompartmentClick
+## IconTexture: Interface\AddOns\TheGrimRepair\Media\Icons\TGR.blp
 ## SavedVariables: TheGrimRepairDB
 ## OptionalDeps: Ace3
 ## X-Curse-Project-ID: 701908
