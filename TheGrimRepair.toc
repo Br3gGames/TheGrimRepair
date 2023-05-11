@@ -3,6 +3,7 @@
 ## Notes: Automates repairs and sells poor quality items for you
 ## Author: Br3g
 ## Version: @project-version@
+## AddonCompartmentFunc: TheGrimRepair_OnAddonCompartmentClick
 ## SavedVariables: TheGrimRepairDB
 ## OptionalDeps: Ace3
 ## X-Curse-Project-ID: 701908

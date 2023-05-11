@@ -22,61 +22,68 @@ local options = {
             type = "description",
             name = L["MSG_TIP_DISABLE"],
         },
-        group_repair = {
+        general = {
+            type = "group",
             order = 2,
-            type = "group",
-            inline = true,
-            name = L["AUTO_REPAIR_HEADER"],
+            name = "General Options",
             args = {
-                guild_repairs = {
+                group_repair = {
                     order = 1,
-                    type = "toggle",
-                    name = L["USE_GUILD_REPAIRS_HEADER"],
-                    desc = L["USE_GUILD_REPAIRS_DESC"],
-                    get = "is_using_guild_repairs",
-                    set = "toggle_guild_repairs",
-                },
-            },
-        },
-        group_sell = {
-            order = 3,
-            type = "group",
-            inline = true,
-            name = L["AUTO_SELL_HEADER"],
-            args = {
-                sell_gray_items = {
-                    order = 1,
-                    type = "toggle",
-                    name = L["SELL_GRAY_HEADER"],
-                    desc = L["SELL_GRAY_DESC"],
-                    get = "is_selling_gray_items",
-                    set = "toggle_sell_gray_items",
-                },
-                moreoptions = {
-                    order = 2,
                     type = "group",
-                    name = L["SELLING_RESTRICTIONS_HEADER"],
-                    disabled = "is_selling_disabled",
+                    inline = true,
+                    name = L["AUTO_REPAIR_HEADER"],
                     args = {
-                        keep_transmog_items = {
+                        guild_repairs = {
                             order = 1,
-                            width = "double",
                             type = "toggle",
-                            name = L["KEEP_GRAY_HEADER"],
-                            desc = L["KEEP_GRAY_DESC"],
-                            get = "is_keeping_transmog_items",
-                            set = "toggle_keeping_transmog_items",
+                            name = L["USE_GUILD_REPAIRS_HEADER"],
+                            desc = L["USE_GUILD_REPAIRS_DESC"],
+                            get = "is_using_guild_repairs",
+                            set = "toggle_guild_repairs",
                         },
                     },
                 },
-                show_sale_details = {
-                    order = 3,
-                    type = "toggle",
-                    name = L["SALE_DETAILS_HEADER"],
-                    desc = L["SALE_DETAILS_DESC"],
-                    disabled = "is_selling_disabled",
-                    get = "is_showing_sale_details",
-                    set = "toggle_show_sale_details",
+                group_sell = {
+                    order = 2,
+                    type = "group",
+                    inline = true,
+                    name = L["AUTO_SELL_HEADER"],
+                    args = {
+                        sell_gray_items = {
+                            order = 1,
+                            type = "toggle",
+                            name = L["SELL_GRAY_HEADER"],
+                            desc = L["SELL_GRAY_DESC"],
+                            get = "is_selling_gray_items",
+                            set = "toggle_sell_gray_items",
+                        },
+                        moreoptions = {
+                            order = 2,
+                            type = "group",
+                            name = L["SELLING_RESTRICTIONS_HEADER"],
+                            disabled = "is_selling_disabled",
+                            args = {
+                                keep_transmog_items = {
+                                    order = 1,
+                                    width = "double",
+                                    type = "toggle",
+                                    name = L["KEEP_GRAY_HEADER"],
+                                    desc = L["KEEP_GRAY_DESC"],
+                                    get = "is_keeping_transmog_items",
+                                    set = "toggle_keeping_transmog_items",
+                                },
+                            },
+                        },
+                        show_sale_details = {
+                            order = 3,
+                            type = "toggle",
+                            name = L["SALE_DETAILS_HEADER"],
+                            desc = L["SALE_DETAILS_DESC"],
+                            disabled = "is_selling_disabled",
+                            get = "is_showing_sale_details",
+                            set = "toggle_show_sale_details",
+                        },
+                    },
                 },
             },
         },
@@ -116,6 +123,10 @@ function TheGrimRepair:PLAYER_INTERACTION_MANAGER_FRAME_SHOW(event, typeId)
         self:auto_repair()
         self:auto_sell()
     end
+end
+
+function TheGrimRepair_OnAddonCompartmentClick(addonName, buttonName)
+    InterfaceOptionsFrame_OpenToCategory("TheGrimRepair")
 end
 
 function TheGrimRepair:is_using_guild_repairs(info)

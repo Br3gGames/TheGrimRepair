@@ -2,6 +2,13 @@
 
 [Full Changelog] [Previous Releases]
 
+## [1.1.0] - 2023-05-11
+
+### Added
+
+- TheGrimRepair now appears in the new addon compartment menu introduced in 10.1
+- New options panel to support better organization as features are added over time
+
 ## [1.0.2] - 2023-05-02
 
 ### Added
@@ -101,7 +108,7 @@
 - Auto repairs using personal funds or guild repairs (if available)
 - Auto sells gray items, optionally keep items which should become eligible for transmog in a future WoW update
 
-[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/1.0.1...1.0.2
+[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/1.0.2...1.1.0
 [Previous Releases]: https://github.com/Br3gGames/TheGrimRepair/releases
 [0.0.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.1
 [0.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.2
@@ -117,3 +124,4 @@
 [1.0.0]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.0.0
 [1.0.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.0.1
 [1.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.0.2
+[1.1.0]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.1.0
