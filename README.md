@@ -21,7 +21,7 @@ Automating repairs, sells gray quality items for you (while optionally keeping e
 - Note: Under active development and likely to change, feel free to request features
 - Quality of life improvements for expansion specific features and content (such as combining items in your bag for you)
 - Dragonflight:
-  - Combine Shadowflame Crest Fragments
+    - Combine Shadowflame Crest Fragments
 
 ### Slash Commands
 - `/tgr`, `/thegrimrepair`: Opens TheGrimRepair options window
