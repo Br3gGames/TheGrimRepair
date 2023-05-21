@@ -2,8 +2,10 @@
 ## Title: TheGrimRepair
 ## Notes: Automates repairs and sells poor quality items for you
 ## Author: Br3g
-## Version: @project-version@
+## Version: 1.0.2
 ## AddonCompartmentFunc: TheGrimRepair_OnAddonCompartmentClick
+## AddonCompartmentFuncOnEnter: TheGrimRepair_OnAddonCompartmentEnter
+## AddonCompartmentFuncOnLeave: TheGrimRepair_OnAddonCompartmentLeave
 ## IconTexture: Interface\AddOns\TheGrimRepair\Media\Icons\TGR.blp
 ## SavedVariables: TheGrimRepairDB
 ## OptionalDeps: Ace3
