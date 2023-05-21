@@ -1,5 +1,5 @@
 # TheGrimRepair
-Automating repairs, sells gray quality items for you (while optionally keeping eligible transmog items), and general expansion quality of life improvements.
+Automating repairs, sells gray quality items for you (while optionally keeping eligible transmog items), and expansion specific quality of life improvements.
 
 ## Features
 
