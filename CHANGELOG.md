@@ -2,6 +2,16 @@
 
 [Full Changelog] [Previous Releases]
 
+## [1.1.0] - 2023-05-21
+
+### Added
+
+- TheGrimRepair now appears in the new addon compartment menu introduced in 10.1
+- New options panel to support better organization as features are added over time
+- New "Utilities" window which is configurable in the addon options panel (shown with merchant windows by default, also available with console command `/tgru` and by right-clicking on the new addon compartment menu)
+- New Dragonflight Utilities window option: Combine Crest Fragments, which gives you a single button to spam that combines your Shadowflame Crest Fragments into their equivalent Shadowflame Crests. No more searching through your bags!
+  - Note: This is currently implemented like a fancy macro, I intend to make this "smarter" overtime.
+
 ## [1.0.2] - 2023-05-02
 
 ### Added
@@ -101,7 +111,7 @@
 - Auto repairs using personal funds or guild repairs (if available)
 - Auto sells gray items, optionally keep items which should become eligible for transmog in a future WoW update
 
-[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/1.0.1...1.0.2
+[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/1.0.2...1.1.0
 [Previous Releases]: https://github.com/Br3gGames/TheGrimRepair/releases
 [0.0.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.1
 [0.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.2
@@ -117,3 +127,4 @@
 [1.0.0]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.0.0
 [1.0.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.0.1
 [1.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.0.2
+[1.1.0]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.1.0
