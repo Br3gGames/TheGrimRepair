@@ -16,7 +16,8 @@ local defaults = {
         is_showing_sale_details = true,
         is_keeping_transmog_items = true,
         is_showing_with_bags = false,
-        is_showing_with_merchants = true,
+        is_showing_with_merchants = false,
+        is_showing_utility_messages = false,
         is_df_combine_fragments = true,
     }
 }
@@ -100,8 +101,17 @@ local options = {
                     inline = true,
                     name = "TheGrimRepair Utilities",
                     args = {
-                        show_with_bags = {
+                        showing_utility_messages = {
                             order = 1,
+                            width = "double",
+                            type = "toggle",
+                            name = "Show utilities window messages (/reload required)",
+                            desc = "If enabled, the utilities window messages are shown",
+                            get = "is_showing_utility_messages",
+                            set = "toggle_show_utility_messages",
+                        },
+                        show_with_bags = {
+                            order = 2,
                             width = "double",
                             type = "toggle",
                             name = "Show with all bag events",
@@ -110,7 +120,7 @@ local options = {
                             set = "toggle_show_with_bags",
                         },
                         show_with_merchants = {
-                            order = 2,
+                            order = 3,
                             width = "double",
                             type = "toggle",
                             name = "Show with merchants",
@@ -330,6 +340,14 @@ function TheGrimRepair:toggle_show_sale_details(info, value)
     self.db.profile.is_showing_sale_details = value
 end
 
+function TheGrimRepair:is_showing_utility_messages(info)
+    return self.db.profile.is_showing_utility_messages
+end
+
+function TheGrimRepair:toggle_show_utility_messages(info, value)
+    self.db.profile.is_showing_utility_messages = value
+end
+
 function TheGrimRepair:is_showing_with_bags(info)
     return self.db.profile.is_showing_with_bags
 end
@@ -450,6 +468,7 @@ function TheGrimRepair:slash_command()
 end
 
 function TheGrimRepair:show_utilities()
+    local is_showing_utility_messages = self:is_showing_utility_messages()
     if tgr_frame then
         tgr_frame:Show()
     else
@@ -501,7 +520,9 @@ function TheGrimRepair:show_utilities()
             df_fragment_btn:SetText("Combine Shadowflame Crest Fragments")
             df_fragment_btn:SetSize(366, df_fragment_btn:GetTextHeight() + 9)
             df_fragment_btn:SetScript("PostClick", function()
-                self:Print("Combining crest fragments... Blizzard requires you to click the button again if you have more to combine.")
+                if is_showing_utility_messages then
+                    self:Print("Combining crest fragments... Blizzard requires you to click the button again if you have more to combine.")
+                end
             end)
 
             AceGUI:RegisterAsWidget(df_fragment_widget)
