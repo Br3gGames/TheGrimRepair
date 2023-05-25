@@ -2,10 +2,11 @@
 
 [Full Changelog] [Previous Releases]
 
-## [1.1.2] - 2023-05-23
+## [1.1.2] - 2023-05-24
 
 ### Fixed
 - Hardcoded value in TOC
+- TheGrimRepair Utilities window now works as advertised, thank you for being a tester Brugen, and thanks to the folks in WoWUIDev Discord!
 
 ## [1.1.1] - 2023-05-21
 
