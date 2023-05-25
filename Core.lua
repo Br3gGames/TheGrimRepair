@@ -19,7 +19,7 @@ local defaults = {
         is_showing_with_merchants = false,
         is_showing_utility_messages = false,
         is_df_combine_fragments = true,
-    }
+    },
 }
 
 local options = {
@@ -511,7 +511,7 @@ function TheGrimRepair:show_utilities()
                 count = tonumber(count)
 
                 if count > 0 then
-                    df_fragment_use = df_fragment_use .. "\n/use item:" .. item_id
+                    df_fragment_use = df_fragment_use .. "/use item:" .. item_id .. "\n"
                 end
             end
 
@@ -524,6 +524,8 @@ function TheGrimRepair:show_utilities()
                     self:Print("Combining crest fragments... Blizzard requires you to click the button again if you have more to combine.")
                 end
             end)
+            -- Needed for SecureActionButtonTemplate to trigger because of the different ActionButtonUseKeyDown CVar states
+            df_fragment_btn:RegisterForClicks("AnyUp", "AnyDown")
 
             AceGUI:RegisterAsWidget(df_fragment_widget)
             tgr_frame:AddChild(df_fragment_widget)
