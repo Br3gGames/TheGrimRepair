@@ -9,6 +9,8 @@ TheGrimRepair = LibStub("AceAddon-3.0"):NewAddon("TGR", "AceConsole-3.0", "AceEv
 local L = LibStub("AceLocale-3.0"):GetLocale("TGR", true)
 local AceGUI = LibStub("AceGUI-3.0")
 
+local tgr_version = C_AddOns.GetAddOnMetadata("TheGrimRepair", "Version")
+
 local defaults = {
     profile = {
         is_using_guild_repairs = true,
@@ -23,7 +25,7 @@ local defaults = {
 }
 
 local options = {
-    name = "TheGrimRepair",
+    name = "TheGrimRepair - v" .. tgr_version,
     handler = TheGrimRepair,
     type = "group",
     args = {
@@ -473,7 +475,7 @@ function TheGrimRepair:show_utilities()
         tgr_frame:Show()
     else
         tgr_frame = AceGUI:Create("Frame")
-        tgr_frame:SetTitle("TheGrimRepair Utilities")
+        tgr_frame:SetTitle("TheGrimRepair Utilities - v" .. tgr_version)
         tgr_frame:SetHeight(200)
         tgr_frame:SetWidth(400)
         tgr_frame:SetPoint("TOP", 0, -200)
@@ -501,19 +503,22 @@ function TheGrimRepair:show_utilities()
             df_fragments_text:SetFullWidth(true)
             df_fragments_text:SetText("\nOnly active if you have enough crest fragments to combine:\n\n")
 
-            -- Build /use string dynamically
-            local df_combine_fragments_count = self:df_find_fragments()
-            local df_fragment_use = ""
+            -- TODO: Temporary fix for users where the dynamic string wasn't always tracking item updates in bag
+            -- -- Build /use string dynamically
+            -- local df_combine_fragments_count = self:df_find_fragments()
+            -- -- local df_fragment_use = ""
 
-            -- Parse the response, break out the combine count
-            for _, value in pairs(df_combine_fragments_count) do
-                local item_id, count = value:match("([^:]+):([^:]+)")
-                count = tonumber(count)
+            -- -- Parse the response, break out the combine count
+            -- for _, value in pairs(df_combine_fragments_count) do
+            --     local item_id, count = value:match("([^:]+):([^:]+)")
+            --     count = tonumber(count)
 
-                if count > 0 then
-                    df_fragment_use = df_fragment_use .. "/use item:" .. item_id .. "\n"
-                end
-            end
+            --     if count > 0 then
+            --         df_fragment_use = df_fragment_use .. "/use item:" .. item_id .. "\n"
+            --     end
+            -- end
+
+            local df_fragment_use = "/use item:204075\n/use item:204076\n/use item:204077\n/use item:204078\n"
 
             df_fragment_btn:SetAttribute("type", "macro")
             df_fragment_btn:SetAttribute("macrotext", df_fragment_use)
