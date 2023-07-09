@@ -2,6 +2,11 @@
 
 [Full Changelog] [Previous Releases]
 
+## [1.1.5] - 2023-07-11
+
+### Added
+- Support for 10.1.5
+
 ## [1.1.3] - 2023-05-25
 
 ### Added
