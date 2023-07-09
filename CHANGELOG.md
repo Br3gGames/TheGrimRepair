@@ -2,7 +2,7 @@
 
 [Full Changelog] [Previous Releases]
 
-## [1.1.5] - 2023-07-11
+## [1.1.4] - 2023-07-11
 
 ### Added
 - Support for 10.1.5
@@ -158,3 +158,4 @@
 [1.1.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.1.1
 [1.1.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.1.2
 [1.1.3]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.1.3
+[1.1.4]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.1.4
