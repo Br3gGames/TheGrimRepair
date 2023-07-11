@@ -2,6 +2,11 @@
 
 [Full Changelog] [Previous Releases]
 
+## [1.1.4] - 2023-07-11
+
+### Added
+- Support for 10.1.5
+
 ## [1.1.3] - 2023-05-25
 
 ### Added
@@ -133,7 +138,7 @@
 - Auto repairs using personal funds or guild repairs (if available)
 - Auto sells gray items, optionally keep items which should become eligible for transmog in a future WoW update
 
-[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/1.1.2...1.1.3
+[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/1.1.3...1.1.4
 [Previous Releases]: https://github.com/Br3gGames/TheGrimRepair/releases
 [0.0.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.1
 [0.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.2
@@ -153,3 +158,4 @@
 [1.1.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.1.1
 [1.1.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.1.2
 [1.1.3]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.1.3
+[1.1.4]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.1.4
