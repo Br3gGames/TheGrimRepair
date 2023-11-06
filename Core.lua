@@ -1,7 +1,6 @@
 -- TODO: Check conventions https://github.com/luarocks/lua-style-guide
 -- TODO: Remove unused Ace3 Libs
 
--- TODO: Auto combine fragments and tell user if there are more in their bank
 -- TODO: Cleanup options layout
 -- TODO: Update translations
 -- TODO: Destroy utilities frame and recreate to remove /reload requirement
@@ -20,7 +19,6 @@ local defaults = {
         is_showing_with_bags = false,
         is_showing_with_merchants = false,
         is_showing_utility_messages = false,
-        is_df_combine_fragments = true,
     },
 }
 
@@ -140,37 +138,14 @@ local options = {
             order = 3,
             name = "Dragonflight Options",
             args = {
-                df_group_tgr_utilities = {
-                    order = 1,
-                    type = "group",
-                    inline = true,
-                    name = "TheGrimRepair Utilities",
-                    args = {
-                        df_combine_fragments = {
-                            order = 1,
-                            width = "double",
-                            type = "toggle",
-                            name = "Combine Shadowflame Crest Fragments",
-                            desc = "If enabled, the utilites window shows an option to combine Shadowflame Crest Fragments",
-                            get = "is_df_combine_fragments",
-                            set = "toggle_df_combine_fragments",
-                        },
-                    },
-                },
-                df_reload_tip = {
-                    order = 2,
-                    width = "full",
-                    type = "description",
-                    name = "Tip: If you made any changes here, you will need to /reload to see them\n\n",
-                },
                 df_development_header = {
-                    order = 3,
+                    order = 1,
                     width = "full",
                     type = "header",
                     name = "THIS FEATURE IS UNDER ACTIVE DEVELOPMENT",
                 },
                 df_development_text = {
-                    order = 4,
+                    order = 2,
                     width = "full",
                     type = "description",
                     name = "In the future, I would like to make the TheGrimRepair Utilities window smarter than just fancy macros.\n\nBlizzard requires user interaction in some circumstances, some functionality will require you to interact more than once.",
@@ -366,14 +341,6 @@ function TheGrimRepair:toggle_show_with_merchants(info, value)
     self.db.profile.is_showing_with_merchants = value
 end
 
-function TheGrimRepair:is_df_combine_fragments(info)
-    return self.db.profile.is_df_combine_fragments
-end
-
-function TheGrimRepair:toggle_df_combine_fragments(info, value)
-    self.db.profile.is_df_combine_fragments = value
-end
-
 function TheGrimRepair:auto_sell()
     local is_selling_gray_items = self:is_selling_gray_items()
     local is_showing_sale_details = self:is_showing_sale_details()
@@ -426,45 +393,6 @@ function TheGrimRepair:auto_sell()
     end
 end
 
-function TheGrimRepair:df_find_fragments()
-    local required_fragments = 15
-    local fragment_ids = {
-        204075, --Whelpling's Shadowflame Crest Fragment
-        204076, --Drake's Shadowflame Crest Fragment
-        204077, --Wyrm's Shadowflame Crest Fragment
-        204078, --Aspect's Shadowflame Crest Fragment
-        -- For testing
-        -- 190328, --Rousing Frost
-        -- 190320, --Rousing Fire
-    }
-    local fragment_combine_table = {}
-
-    for bag_number = 0, NUM_TOTAL_EQUIPPED_BAG_SLOTS do
-
-        for slot_number = 1, C_Container.GetContainerNumSlots(bag_number) do
-            local item_location = ItemLocation:CreateFromBagAndSlot(bag_number, slot_number)
-
-            if item_location:IsValid() then
-                local item_id = C_Item.GetItemID(item_location)
-
-                for _, value in pairs(fragment_ids) do
-                    if value == item_id then
-                        local fragment_count = GetItemCount(item_id)
-                        -- local item_name, item_link = GetItemInfo(item_id)
-                        local fragment_combine_count = math.floor(fragment_count / required_fragments)
-
-                        -- Save the item_id with the combine count
-                        table.insert(fragment_combine_table, item_id .. ":" .. fragment_combine_count)
-                        break
-                    end
-                end
-
-            end
-        end
-    end
-    return fragment_combine_table
-end
-
 function TheGrimRepair:slash_command()
     InterfaceOptionsFrame_OpenToCategory(self.optionsFrame)
 end
@@ -491,55 +419,10 @@ function TheGrimRepair:show_utilities()
         df_heading:SetText("Dragonflight")
         tgr_frame:AddChild(df_heading)
 
-        local df_combine_fragments_option = self:is_df_combine_fragments()
-
-        if df_combine_fragments_option then
-            local df_fragment_btn = CreateFrame("Button", nil, UIParent, "SecureActionButtonTemplate, UIPanelButtonTemplate")
-            local df_fragment_widget = {
-                frame = df_fragment_btn
-            }
-
-            local df_fragments_text = AceGUI:Create("Label")
-            df_fragments_text:SetFullWidth(true)
-            df_fragments_text:SetText("\nOnly active if you have enough crest fragments to combine:\n\n")
-
-            -- TODO: Temporary fix for users where the dynamic string wasn't always tracking item updates in bag
-            -- -- Build /use string dynamically
-            -- local df_combine_fragments_count = self:df_find_fragments()
-            -- -- local df_fragment_use = ""
-
-            -- -- Parse the response, break out the combine count
-            -- for _, value in pairs(df_combine_fragments_count) do
-            --     local item_id, count = value:match("([^:]+):([^:]+)")
-            --     count = tonumber(count)
-
-            --     if count > 0 then
-            --         df_fragment_use = df_fragment_use .. "/use item:" .. item_id .. "\n"
-            --     end
-            -- end
-
-            local df_fragment_use = "/use item:204075\n/use item:204076\n/use item:204077\n/use item:204078\n"
-
-            df_fragment_btn:SetAttribute("type", "macro")
-            df_fragment_btn:SetAttribute("macrotext", df_fragment_use)
-            df_fragment_btn:SetText("Combine Shadowflame Crest Fragments")
-            df_fragment_btn:SetSize(366, df_fragment_btn:GetTextHeight() + 9)
-            df_fragment_btn:SetScript("PostClick", function()
-                if is_showing_utility_messages then
-                    self:Print("Combining crest fragments... Blizzard requires you to click the button again if you have more to combine.")
-                end
-            end)
-            -- Needed for SecureActionButtonTemplate to trigger because of the different ActionButtonUseKeyDown CVar states
-            df_fragment_btn:RegisterForClicks("AnyUp", "AnyDown")
-
-            AceGUI:RegisterAsWidget(df_fragment_widget)
-            tgr_frame:AddChild(df_fragment_widget)
-        else
-            local df_default_text = AceGUI:Create("Label")
-            df_default_text:SetFullWidth(true)
-            df_default_text:SetText("\nYou haven't configured any Dragonflight options yet or you need to /reload")
-            tgr_frame:AddChild(df_default_text)
-        end
+        local df_default_text = AceGUI:Create("Label")
+        df_default_text:SetFullWidth(true)
+        df_default_text:SetText("\nYou haven't configured any Dragonflight options yet or you need to /reload")
+        tgr_frame:AddChild(df_default_text)
 
     end
 end
