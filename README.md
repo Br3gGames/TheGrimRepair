@@ -20,8 +20,6 @@ Automating repairs, sells gray quality items for you (while optionally keeping e
 ### TheGrimRepair Utilities
 - Note: Under active development and likely to change, feel free to request features
 - Quality of life improvements for expansion specific features and content (such as combining items in your bag for you)
-- Dragonflight:
-    - Combine Shadowflame Crest Fragments
 
 ### Slash Commands
 - `/tgr`, `/thegrimrepair`: Opens TheGrimRepair options window
@@ -43,7 +41,7 @@ There are many great addons and macros that address some of the same problems th
 
 ### Resources
 These are some resources I found helpful along the way:
-- Wowpedia: [https://wowpedia.fandom.com/wiki/World_of_Warcraft_API](https://wowpedia.fandom.com/wiki/World_of_Warcraft_API)
+- WarCraft Wiki: [https://warcraft.wiki.gg/wiki/World_of_Warcraft_API](https://warcraft.wiki.gg/wiki/World_of_Warcraft_API)
 - Ace3 for Dummies: [https://wowpedia.fandom.com/wiki/Ace3_for_Dummies](https://wowpedia.fandom.com/wiki/Ace3_for_Dummies)
 - BigWigsMods packager: [https://github.com/BigWigsMods/packager](https://github.com/BigWigsMods/packager)
 - Discord:
