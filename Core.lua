@@ -365,7 +365,7 @@ function TheGrimRepair:auto_sell()
                     if item_quality == 0 then
                         local item_link = C_Item.GetItemLink(item_location)
                         local item_stack = C_Item.GetStackCount(item_location)
-                        local item_sell_price, item_class_id = select(11, GetItemInfo(item_link))
+                        local item_sell_price, item_class_id = select(11, C_Item.GetItemInfo(item_link))
                         local is_skipped_item = false
 
                         -- Skip the item if it can be used for transmog
