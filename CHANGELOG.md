@@ -2,6 +2,14 @@
 
 [Full Changelog] [Previous Releases]
 
+## [1.3.0] - 2024-07-10
+
+### Added
+- Support for 11.0.2
+
+### Removed
+- References to Dragonflight
+
 ## [1.2.3] - 2024-05-07
 
 ### Added
@@ -166,7 +174,7 @@
 - Auto repairs using personal funds or guild repairs (if available)
 - Auto sells gray items, optionally keep items which should become eligible for transmog in a future WoW update
 
-[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/1.2.2...1.2.3
+[Full Changelog]: https://github.com/Br3gGames/TheGrimRepair/compare/1.2.3...1.3.0
 [Previous Releases]: https://github.com/Br3gGames/TheGrimRepair/releases
 [0.0.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.1
 [0.0.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/0.0.2
@@ -192,3 +200,4 @@
 [1.2.1]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.2.1
 [1.2.2]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.2.2
 [1.2.3]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.2.3
+[1.3.0]: https://github.com/Br3gGames/TheGrimRepair/releases/tag/1.3.0
