@@ -2,6 +2,7 @@
     "Lua.diagnostics.globals": [
         "InterfaceOptionsFrame_OpenToCategory",
         "NUM_BAG_SLOTS",
-        "UNCOMMON_GREEN_COLOR"
+        "UNCOMMON_GREEN_COLOR",
+        "Settings"
     ]
 }

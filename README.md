@@ -4,7 +4,6 @@ Automating repairs, sells gray quality items for you (while optionally keeping e
 ## Features
 
 ### General
-- Supports Dragonflight using Blizzards modern APIs (where possible)
 - Supports multiple character profiles
 - Temporarily disable TGR by holding the "Shift" key while interacting with a merchant
 - Utilizes the addon compartment menu (introduced in 10.1), one less addon on your minimap

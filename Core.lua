@@ -133,18 +133,18 @@ local options = {
                 },
             },
         },
-        xpac_dragonflight = {
+        xpac_tww = {
             type = "group",
             order = 3,
-            name = "Dragonflight Options",
+            name = "The War Within Options",
             args = {
-                df_development_header = {
+                tww_development_header = {
                     order = 1,
                     width = "full",
                     type = "header",
                     name = "THIS FEATURE IS UNDER ACTIVE DEVELOPMENT",
                 },
-                df_development_text = {
+                tww_development_text = {
                     order = 2,
                     width = "full",
                     type = "description",
@@ -160,7 +160,7 @@ local tgr_frame
 function TheGrimRepair:OnInitialize()
     self.db = LibStub("AceDB-3.0"):New("TheGrimRepairDB", defaults, true)
     LibStub("AceConfig-3.0"):RegisterOptionsTable("TheGrimRepair", options)
-	self.optionsFrame = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("TheGrimRepair", "TheGrimRepair")
+	self.optionsFrame, self.categoryId = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("TheGrimRepair", "TheGrimRepair")
 
     local profiles = LibStub("AceDBOptions-3.0"):GetOptionsTable(self.db)
     LibStub("AceConfig-3.0"):RegisterOptionsTable("TheGrimRepair_Profiles", profiles)
@@ -232,7 +232,7 @@ function TheGrimRepair_OnAddonCompartmentClick(addonName, buttonName)
     if buttonName == "RightButton" then
         TheGrimRepair:show_utilities()
     else
-        InterfaceOptionsFrame_OpenToCategory("TheGrimRepair")
+        Settings.OpenToCategory(addonName)
     end
 end
 
@@ -282,7 +282,7 @@ function TheGrimRepair:auto_repair()
 
         if playerMoney > 0 then
             RepairAllItems(is_using_guild_repairs)
-            self:Print(msg_repaired .. ":", GetCoinTextureString(repair_cost))
+            self:Print(msg_repaired .. ":", C_CurrencyInfo.GetCoinTextureString(repair_cost))
         else
             self:Print(L["MSG_NO_MONEY"])
         end
@@ -383,7 +383,7 @@ function TheGrimRepair:auto_sell()
                             C_Container.UseContainerItem(bag_number, slot_number)
 
                             if is_showing_sale_details then
-                                self:Print(msg_sold_items .. ":", item_link .. UNCOMMON_GREEN_COLOR:WrapTextInColorCode("x" .. item_stack), GetCoinTextureString(item_sell_price))
+                                self:Print(msg_sold_items .. ":", item_link .. UNCOMMON_GREEN_COLOR:WrapTextInColorCode("x" .. item_stack), C_CurrencyInfo.GetCoinTextureString(item_sell_price))
                             end
                         end
                     end
@@ -394,7 +394,7 @@ function TheGrimRepair:auto_sell()
 end
 
 function TheGrimRepair:slash_command()
-    InterfaceOptionsFrame_OpenToCategory(self.optionsFrame)
+    Settings.OpenToCategory(self.categoryId)
 end
 
 function TheGrimRepair:show_utilities()
@@ -414,15 +414,15 @@ function TheGrimRepair:show_utilities()
         tgru_text:SetText("\nTip: Opens with /tgru or by right-clicking from the addon dropdown\n\n")
         tgr_frame:AddChild(tgru_text)
 
-        local df_heading = AceGUI:Create("Heading")
-        df_heading:SetFullWidth(true)
-        df_heading:SetText("Dragonflight")
-        tgr_frame:AddChild(df_heading)
+        local tww_heading = AceGUI:Create("Heading")
+        tww_heading:SetFullWidth(true)
+        tww_heading:SetText("Expansion Helpers")
+        tgr_frame:AddChild(tww_heading)
 
-        local df_default_text = AceGUI:Create("Label")
-        df_default_text:SetFullWidth(true)
-        df_default_text:SetText("\nYou haven't configured any Dragonflight options yet or you need to /reload")
-        tgr_frame:AddChild(df_default_text)
+        local tww_default_text = AceGUI:Create("Label")
+        tww_default_text:SetFullWidth(true)
+        tww_default_text:SetText("\nYou haven't configured any expansion specific options yet or you need to /reload")
+        tgr_frame:AddChild(tww_default_text)
 
     end
 end
