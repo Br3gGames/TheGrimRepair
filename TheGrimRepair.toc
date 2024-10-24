@@ -1,4 +1,4 @@
-## Interface: 110002
+## Interface: 110005
 ## Title: TheGrimRepair
 ## Notes: Automating repairs, sells gray quality items for you (while optionally keeping eligible transmog items), and expansion specific quality of life improvements.
 ## Author: Br3g
