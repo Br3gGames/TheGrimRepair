@@ -3,10 +3,10 @@
         "InterfaceOptionsFrame_OpenToCategory",
         "NUM_BAG_SLOTS",
         "UNCOMMON_GREEN_COLOR",
+        "Settings",
         "EventRegistry",
         "NUM_TOTAL_EQUIPPED_BAG_SLOTS",
         "UIParent",
-        "ItemLocation",
-        "Settings"
+        "ItemLocation"
     ]
 }
