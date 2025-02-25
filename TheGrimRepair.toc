@@ -1,8 +1,20 @@
-## Interface: 110007
+## Interface: 110100
 ## Title: TheGrimRepair
 ## Notes: Automating repairs, sells gray quality items for you (while optionally keeping eligible transmog items), and expansion specific quality of life improvements.
 ## Author: Br3g
 ## Version: @project-version@
+## Category: Inventory
+## Category-enUS: Inventory
+## Category-deDE: Inventar
+## Category-esES: Inventario
+## Category-esMX: Inventario
+## Category-frFR: Inventaire
+## Category-itIT: Inventario
+## Category-koKR: 소지품
+## Category-ptBR: Inventário
+## Category-ruRU: Предметы
+## Category-zhCN: 物品栏
+## Category-zhTW: 物品欄
 ## AddonCompartmentFunc: TheGrimRepair_OnAddonCompartmentClick
 ## AddonCompartmentFuncOnEnter: TheGrimRepair_OnAddonCompartmentEnter
 ## AddonCompartmentFuncOnLeave: TheGrimRepair_OnAddonCompartmentLeave
