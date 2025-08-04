@@ -423,7 +423,6 @@ function TheGrimRepair:show_utilities()
         tww_default_text:SetFullWidth(true)
         tww_default_text:SetText("\nYou haven't configured any expansion specific options yet or you need to /reload")
         tgr_frame:AddChild(tww_default_text)
-
     end
 end
 
