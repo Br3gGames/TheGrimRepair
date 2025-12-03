@@ -133,18 +133,18 @@ local options = {
                 },
             },
         },
-        xpac_tww = {
+        xpac_midnight = {
             type = "group",
             order = 3,
-            name = "The War Within Options",
+            name = "Midnight Options",
             args = {
-                tww_development_header = {
+                midnight_development_header = {
                     order = 1,
                     width = "full",
                     type = "header",
                     name = "THIS FEATURE IS UNDER ACTIVE DEVELOPMENT",
                 },
-                tww_development_text = {
+                midnight_development_text = {
                     order = 2,
                     width = "full",
                     type = "description",
@@ -414,15 +414,15 @@ function TheGrimRepair:show_utilities()
         tgru_text:SetText("\nTip: Opens with /tgru or by right-clicking from the addon dropdown\n\n")
         tgr_frame:AddChild(tgru_text)
 
-        local tww_heading = AceGUI:Create("Heading")
-        tww_heading:SetFullWidth(true)
-        tww_heading:SetText("Expansion Helpers")
-        tgr_frame:AddChild(tww_heading)
+        local midnight_heading = AceGUI:Create("Heading")
+        midnight_heading:SetFullWidth(true)
+        midnight_heading:SetText("Expansion Helpers")
+        tgr_frame:AddChild(midnight_heading)
 
-        local tww_default_text = AceGUI:Create("Label")
-        tww_default_text:SetFullWidth(true)
-        tww_default_text:SetText("\nYou haven't configured any expansion specific options yet or you need to /reload")
-        tgr_frame:AddChild(tww_default_text)
+        local midnight_default_text = AceGUI:Create("Label")
+        midnight_default_text:SetFullWidth(true)
+        midnight_default_text:SetText("\nYou haven't configured any expansion specific options yet or you need to /reload")
+        tgr_frame:AddChild(midnight_default_text)
     end
 end
 
