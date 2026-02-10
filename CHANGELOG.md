@@ -12,6 +12,9 @@
 ### Added
 - Support for 12.0.0 (Midnight)
 
+### Removed
+- References to The War Within
+
 ## [1.3.6] - 2025-08-04
 
 ### Added
