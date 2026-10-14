@@ -2,6 +2,11 @@
 
 [Full Changelog] [Previous Releases]
 
+## [1.4.6] - 2026-10-14
+
+### Added
+- Support for 12.1.5
+
 ## [1.4.5] - 2026-08-12
 
 ### Fixed
